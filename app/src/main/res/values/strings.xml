@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Audio AI</string>
+    <string name="hot_recommendations">热门推荐</string>
+    <string name="new_releases">最新发布</string>
+    <string name="error_loading_data">加载数据失败，请重试</string>
+    <string name="next">下一步</string>
+    <string name="previous">上一步</string>
+    <string name="lorem_ipsum">示例文本</string>
+    <string name="floating_icon_description">浮动窗口图标</string>
+    <string name="listening">正在聆听</string>
+    <string name="home_title">首页</string>
+    <string name="action_settings">设置</string>
+</resources>

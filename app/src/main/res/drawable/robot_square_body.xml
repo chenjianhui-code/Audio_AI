@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 机器人身体 -->
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="200dp"
+                android:height="200dp" />
+            <corners android:radius="20dp" />
+            <solid android:color="#3F51B5" />
+        </shape>
+    </item>
+    <!-- 机器人眼睛 - 左眼 -->
+    <item
+        android:left="50dp"
+        android:top="60dp">
+        <shape android:shape="oval">
+            <size
+                android:width="30dp"
+                android:height="30dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- 机器人眼睛 - 右眼 -->
+    <item
+        android:left="120dp"
+        android:top="60dp">
+        <shape android:shape="oval">
+            <size
+                android:width="30dp"
+                android:height="30dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

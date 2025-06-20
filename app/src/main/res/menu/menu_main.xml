@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ai.app.audio_ai.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_robot_broadcast"
+        android:orderInCategory="101"
+        android:title="机器人播报"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_floating_window"
+        android:orderInCategory="102"
+        android:title="浮动语音助手"
+        android:checkable="true"
+        app:showAsAction="never" />
+</menu>

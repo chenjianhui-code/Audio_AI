@@ -1,0 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.52'
+        classpath 'com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.22-1.0.17'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.22' apply false
+    id 'com.google.dagger.hilt.android' version '2.52' apply false
+}
+
+allprojects {
+    def javaHome = file("D:/ProgramFiles/Java/jdk-17.0.15.6-hotspot")
+
+    // Configure Java compilation
+    tasks.withType(JavaCompile).configureEach {
+        options.fork = true
+        options.forkOptions.javaHome = javaHome
+        options.encoding = 'UTF-8'
+        options.compilerArgs += ['-Xlint:deprecation', '-Xlint:unchecked']
+    }
+    
+    // Disable all jlink related tasks
+    tasks.all {
+        if (it.name.toLowerCase().contains('jlink')) {
+            it.enabled = false
+        }
+    }
+    
+    // Set Java version for all Java tasks
+    tasks.withType(JavaCompile).configureEach {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    
+    // Enable Jar tasks if they exist
+    tasks.all { task ->
+        if (task.name.endsWith('Jar')) {
+            task.enabled = true
+        }
+    }
+    
+    // Force all Kotlin dependencies to use the same version
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22"
+            force "org.jetbrains.kotlin:kotlin-reflect:1.9.22"
+        }
+    }
+}

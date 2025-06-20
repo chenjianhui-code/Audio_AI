@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotWebChatHistory">
+    <option name="currentConversation">
+      <WebConversation>
+        <option name="session">
+          <ChatSession>
+            <option name="messages">
+              <list>
+                <UIChatMessage>
+                  <option name="command" value="" />
+                  <option name="content" value="编译报错：e: file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/MainActivity.kt:47:84 Too many arguments for public open fun getInstance(): UserManager! defined in com.ai.app.audio_ai.data.UserManager" />
+                  <option name="cost" value="0" />
+                  <option name="createdAt" value="1750300606304" />
+                  <option name="localReferences">
+                    <list>
+                      <LocalReferences>
+                        <option name="isRequestStage" value="true" />
+                        <option name="range">
+                          <RefRange />
+                        </option>
+                        <option name="uri" value="{&quot;path&quot;:&quot;file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/LoginFragment.java&quot;}" />
+                      </LocalReferences>
+                    </list>
+                  </option>
+                  <option name="parser">
+                    <SimpleMarkdownStreamParser>
+                      <option name="content" value="编译报错：e: file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/MainActivity.kt:47:84 Too many arguments for public open fun getInstance(): UserManager! defined in com.ai.app.audio_ai.data.UserManager" />
+                      <option name="nodes">
+                        <list>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="编译报错：e: file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/MainActivity.kt:47:84 Too many arguments for public open fun getInstance(): UserManager! defined in com.ai.app.audio_ai.data.UserManager" />
+                            <option name="contentId" value="329072761" />
+                            <option name="settled" value="false" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                        </list>
+                      </option>
+                      <option name="parserState">
+                        <ParserState>
+                          <option name="column" value="237" />
+                          <option name="offset" value="238" />
+                          <option name="moveCursor" value="true" />
+                        </ParserState>
+                      </option>
+                    </SimpleMarkdownStreamParser>
+                  </option>
+                  <option name="role" value="user" />
+                  <option name="selectedRanges">
+                    <list />
+                  </option>
+                  <option name="uri" value="" />
+                  <option name="variables">
+                    <list />
+                  </option>
+                </UIChatMessage>
+                <UIChatMessage>
+                  <option name="actions">
+                    <list />
+                  </option>
+                  <option name="codebaseReferences">
+                    <list />
+                  </option>
+                  <option name="codebaseStatus" value="init" />
+                  <option name="command" value="" />
+                  <option name="content" value="根据提供的代码和错误信息，我注意到以下几点：&#10;&#10;1. 提供的代码是`LoginFragment.java`中的`onViewCreated`方法，但错误信息来自`MainActivity.kt`文件&#10;2. 错误表明在`MainActivity.kt`第47行84列处，调用`UserManager.getInstance()`时传入了过多参数&#10;3. 错误显示`UserManager.getInstance()`是一个无参方法，但调用时可能传入了参数&#10;&#10;解决方案建议：&#10;&#10;1. 检查`MainActivity.kt`文件中第47行对`UserManager.getInstance()`的调用&#10;2. 确保调用时不传入任何参数，因为方法定义是`getInstance(): UserManager!`&#10;3. 如果确实需要传入参数，需要修改`UserManager`类中的`getInstance`方法定义&#10;&#10;例如，如果当前调用是：&#10;```kotlin&#10;val userManager = UserManager.getInstance(someParameter)&#10;```&#10;&#10;应该改为：&#10;```kotlin&#10;val userManager = UserManager.getInstance()&#10;```&#10;&#10;或者修改`UserManager`类中的方法定义以接受参数。&#10;&#10;由于没有看到`MainActivity.kt`的实际代码，我只能基于错误信息给出这些建议。如果需要更具体的帮助，请提供`MainActivity.kt`中相关代码部分。" />
+                  <option name="cost" value="12285" />
+                  <option name="createdAt" value="1750300618628" />
+                  <option name="followup">
+                    <list />
+                  </option>
+                  <option name="id" value="0197860bbf607ff7bc34a972c0791459" />
+                  <option name="knowledgeReferences">
+                    <list />
+                  </option>
+                  <option name="localReferences">
+                    <list>
+                      <LocalReferences>
+                        <option name="isRequestStage" value="true" />
+                        <option name="range">
+                          <RefRange />
+                        </option>
+                        <option name="uri" value="{&quot;path&quot;:&quot;file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/LoginFragment.java&quot;}" />
+                      </LocalReferences>
+                    </list>
+                  </option>
+                  <option name="parser">
+                    <SimpleMarkdownStreamParser>
+                      <option name="columns">
+                        <list>
+                          <option value="21" />
+                          <option value="-1" />
+                          <option value="74" />
+                          <option value="70" />
+                          <option value="52" />
+                          <option value="-1" />
+                          <option value="6" />
+                          <option value="-1" />
+                          <option value="59" />
+                          <option value="51" />
+                          <option value="50" />
+                          <option value="-1" />
+                          <option value="10" />
+                          <option value="8" />
+                          <option value="55" />
+                          <option value="2" />
+                          <option value="-1" />
+                          <option value="4" />
+                          <option value="8" />
+                          <option value="42" />
+                          <option value="2" />
+                          <option value="-1" />
+                          <option value="29" />
+                          <option value="-1" />
+                          <option value="83" />
+                        </list>
+                      </option>
+                      <option name="content" value="根据提供的代码和错误信息，我注意到以下几点：&#10;&#10;1. 提供的代码是`LoginFragment.java`中的`onViewCreated`方法，但错误信息来自`MainActivity.kt`文件&#10;2. 错误表明在`MainActivity.kt`第47行84列处，调用`UserManager.getInstance()`时传入了过多参数&#10;3. 错误显示`UserManager.getInstance()`是一个无参方法，但调用时可能传入了参数&#10;&#10;解决方案建议：&#10;&#10;1. 检查`MainActivity.kt`文件中第47行对`UserManager.getInstance()`的调用&#10;2. 确保调用时不传入任何参数，因为方法定义是`getInstance(): UserManager!`&#10;3. 如果确实需要传入参数，需要修改`UserManager`类中的`getInstance`方法定义&#10;&#10;例如，如果当前调用是：&#10;```kotlin&#10;val userManager = UserManager.getInstance(someParameter)&#10;```&#10;&#10;应该改为：&#10;```kotlin&#10;val userManager = UserManager.getInstance()&#10;```&#10;&#10;或者修改`UserManager`类中的方法定义以接受参数。&#10;&#10;由于没有看到`MainActivity.kt`的实际代码，我只能基于错误信息给出这些建议。如果需要更具体的帮助，请提供`MainActivity.kt`中相关代码部分。&#10;" />
+                      <option name="nodes">
+                        <list>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="根据提供的代码和错误信息，我注意到以下几点：" />
+                            <option name="contentId" value="-1170371483" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="1. 提供的代码是`LoginFragment.java`中的`onViewCreated`方法，但错误信息来自`MainActivity.kt`文件" />
+                            <option name="contentId" value="-501044320" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="2. 错误表明在`MainActivity.kt`第47行84列处，调用`UserManager.getInstance()`时传入了过多参数" />
+                            <option name="contentId" value="866906730" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="3. 错误显示`UserManager.getInstance()`是一个无参方法，但调用时可能传入了参数" />
+                            <option name="contentId" value="-213860328" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="解决方案建议：" />
+                            <option name="contentId" value="1378664295" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="1. 检查`MainActivity.kt`文件中第47行对`UserManager.getInstance()`的调用" />
+                            <option name="contentId" value="-2137242800" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="2. 确保调用时不传入任何参数，因为方法定义是`getInstance(): UserManager!`" />
+                            <option name="contentId" value="1046564597" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="3. 如果确实需要传入参数，需要修改`UserManager`类中的`getInstance`方法定义" />
+                            <option name="contentId" value="-435521129" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="例如，如果当前调用是：" />
+                            <option name="contentId" value="2030483417" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="val userManager = UserManager.getInstance(someParameter)&#10;" />
+                            <option name="contentId" value="1739919149" />
+                            <option name="expectEnding" value="```" />
+                            <option name="indentSize" value="0" />
+                            <option name="language" value="kotlin" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="code-block" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="应该改为：" />
+                            <option name="contentId" value="1977947560" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="val userManager = UserManager.getInstance()&#10;" />
+                            <option name="contentId" value="-1593624246" />
+                            <option name="expectEnding" value="```" />
+                            <option name="indentSize" value="0" />
+                            <option name="language" value="kotlin" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="code-block" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="或者修改`UserManager`类中的方法定义以接受参数。" />
+                            <option name="contentId" value="394448022" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="由于没有看到`MainActivity.kt`的实际代码，我只能基于错误信息给出这些建议。如果需要更具体的帮助，请提供`MainActivity.kt`中相关代码部分。" />
+                            <option name="contentId" value="1500022166" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="false" />
+                            <option name="type" value="undetermined" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                        </list>
+                      </option>
+                      <option name="parserState">
+                        <ParserState>
+                          <option name="line" value="25" />
+                          <option name="column" value="-1" />
+                          <option name="offset" value="669" />
+                          <option name="moveCursor" value="true" />
+                        </ParserState>
+                      </option>
+                    </SimpleMarkdownStreamParser>
+                  </option>
+                  <option name="references">
+                    <list />
+                  </option>
+                  <option name="role" value="assistant" />
+                  <option name="topic" value="" />
+                </UIChatMessage>
+              </list>
+            </option>
+            <option name="messagesV3">
+              <list>
+                <ChatMessageV3>
+                  <option name="role" value="user" />
+                  <option name="content" value="编译报错：e: file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/MainActivity.kt:47:84 Too many arguments for public open fun getInstance(): UserManager! defined in com.ai.app.audio_ai.data.UserManager" />
+                  <option name="extra">
+                    <ChatMessageExtra>
+                      <option name="agent" value="default" />
+                      <option name="cmd" value="default" />
+                      <option name="code" value="&#10;    @Leviirwv&#10;    kfyorx elrw lmErvdXivzgvw(@MlmMfoo Ervd ervd, @Mfoozyov Yfmwov hzevwRmhgzmxvHgzgv) {&#10;        hfkvi.lmErvdXivzgvw(ervd, hzevwRmhgzmxvHgzgv);&#10;&#10;        // 初始化视图&#10;        vwrgGvcgFhvimznv = ervd.urmwErvdYbRw(I.rw.vwrgGvcgFhvimznv);&#10;        vwrgGvcgKzhhdliw = ervd.urmwErvdYbRw(I.rw.vwrgGvcgKzhhdliw);&#10;        xsvxpYlcIvnvnyviKzhhdliw = ervd.urmwErvdYbRw(I.rw.xsvxpYlcIvnvnyviKzhhdliw);&#10;        kiltivhhYzi = ervd.urmwErvdYbRw(I.rw.kiltivhhYzi);&#10;&#10;        // 初始化HszivwKivuvivmxvh&#10;        hszivwKivuvivmxvh = ivjfrivZxgrergb().tvgHszivwKivuvivmxvh(KIVU_MZNV, Xlmgvcg.NLWV_KIREZGV);&#10;&#10;        // 加载保存的登录信息&#10;        olzwHzevwOltrmRmul();&#10;&#10;        // 设置登录按钮点击事件&#10;        ervd.urmwErvdYbRw(I.rw.yfgglmOltrm).hvgLmXorxpOrhgvmvi(e -&gt; oltrm());&#10;&#10;        // 设置去注册按钮点击事件&#10;        ervd.urmwErvdYbRw(I.rw.yfgglmTlGlIvtrhgvi).hvgLmXorxpOrhgvmvi(e -&gt; {&#10;            // 使用Mzertzgrlm组件导航到注册页面&#10;            MzeXlmgiloovi mzeXlmgiloovi = MzeSlhgUiztnvmg.urmwMzeXlmgiloovi(gsrh);&#10;            mzeXlmgiloovi.mzertzgv(I.rw.zxgrlm_oltrmUiztnvmg_gl_ivtrhgviUiztnvmg);&#10;        });&#10;    }&#10;&#10;    /**&#10;     * 加载保存的登录信息&#10;" />
+                      <option name="path" value="D:\Users\chenjianhui\code\IdeaProjects\Audio_AI\app\src\main\java\com\ai\app\audio_ai\LoginFragment.java" />
+                    </ChatMessageExtra>
+                  </option>
+                </ChatMessageV3>
+                <ChatMessageV3>
+                  <option name="role" value="assistant" />
+                  <option name="content" value="根据提供的代码和错误信息，我注意到以下几点：&#10;&#10;1. 提供的代码是`LoginFragment.java`中的`onViewCreated`方法，但错误信息来自`MainActivity.kt`文件&#10;2. 错误表明在`MainActivity.kt`第47行84列处，调用`UserManager.getInstance()`时传入了过多参数&#10;3. 错误显示`UserManager.getInstance()`是一个无参方法，但调用时可能传入了参数&#10;&#10;解决方案建议：&#10;&#10;1. 检查`MainActivity.kt`文件中第47行对`UserManager.getInstance()`的调用&#10;2. 确保调用时不传入任何参数，因为方法定义是`getInstance(): UserManager!`&#10;3. 如果确实需要传入参数，需要修改`UserManager`类中的`getInstance`方法定义&#10;&#10;例如，如果当前调用是：&#10;```kotlin&#10;val userManager = UserManager.getInstance(someParameter)&#10;```&#10;&#10;应该改为：&#10;```kotlin&#10;val userManager = UserManager.getInstance()&#10;```&#10;&#10;或者修改`UserManager`类中的方法定义以接受参数。&#10;&#10;由于没有看到`MainActivity.kt`的实际代码，我只能基于错误信息给出这些建议。如果需要更具体的帮助，请提供`MainActivity.kt`中相关代码部分。" />
+                  <option name="extra">
+                    <ChatMessageExtra />
+                  </option>
+                </ChatMessageV3>
+              </list>
+            </option>
+            <option name="sessionId" value="019785e25ea07ff7bc349d3c2d95d27a" />
+          </ChatSession>
+        </option>
+        <option name="conversationId" value="019785e25ea07ff7bc349d3c2d95d27a" />
+        <option name="conversation">
+          <Conversation>
+            <option name="createTime" value="1750297891970" />
+            <option name="id" value="019785e25ea07ff7bc349d3c2d95d27a" />
+            <option name="title" value="编译报错：e: file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/MainActivity.kt:47:84 Too many arguments for public open fun getInstance(): UserManager! defined in com.ai.app.audio_ai.data.UserManager" />
+            <option name="turns">
+              <list>
+                <Turn>
+                  <option name="agent" value="" />
+                  <option name="answer" value="根据提供的代码和错误信息，我注意到以下几点：&#10;&#10;8. 提供的代码是`OltrmUiztnvmg.qzez`中的`lmErvdXivzgvw`方法，但错误信息来自`NzrmZxgrergb.pg`文件&#10;7. 错误表明在`NzrmZxgrergb.pg`第52行15列处，调用`FhviNzmztvi.tvgRmhgzmxv()`时传入了过多参数&#10;6. 错误显示`FhviNzmztvi.tvgRmhgzmxv()`是一个无参方法，但调用时可能传入了参数&#10;&#10;解决方案建议：&#10;&#10;8. 检查`NzrmZxgrergb.pg`文件中第52行对`FhviNzmztvi.tvgRmhgzmxv()`的调用&#10;7. 确保调用时不传入任何参数，因为方法定义是`tvgRmhgzmxv(): FhviNzmztvi!`&#10;6. 如果确实需要传入参数，需要修改`FhviNzmztvi`类中的`tvgRmhgzmxv`方法定义&#10;&#10;例如，如果当前调用是：&#10;```plgorm&#10;ezo fhviNzmztvi = FhviNzmztvi.tvgRmhgzmxv(hlnvKziznvgvi)&#10;```&#10;&#10;应该改为：&#10;```plgorm&#10;ezo fhviNzmztvi = FhviNzmztvi.tvgRmhgzmxv()&#10;```&#10;&#10;或者修改`FhviNzmztvi`类中的方法定义以接受参数。&#10;&#10;由于没有看到`NzrmZxgrergb.pg`的实际代码，我只能基于错误信息给出这些建议。如果需要更具体的帮助，请提供`NzrmZxgrergb.pg`中相关代码部分。" />
+                  <option name="chatResource" value="user" />
+                  <option name="codeReferences">
+                    <list>
+                      <CodeReferencesBean>
+                        <option name="content" value="&#10;    @Leviirwv&#10;    kfyorx elrw lmErvdXivzgvw(@MlmMfoo Ervd ervd, @Mfoozyov Yfmwov hzevwRmhgzmxvHgzgv) {&#10;        hfkvi.lmErvdXivzgvw(ervd, hzevwRmhgzmxvHgzgv);&#10;&#10;        // 初始化视图&#10;        vwrgGvcgFhvimznv = ervd.urmwErvdYbRw(I.rw.vwrgGvcgFhvimznv);&#10;        vwrgGvcgKzhhdliw = ervd.urmwErvdYbRw(I.rw.vwrgGvcgKzhhdliw);&#10;        xsvxpYlcIvnvnyviKzhhdliw = ervd.urmwErvdYbRw(I.rw.xsvxpYlcIvnvnyviKzhhdliw);&#10;        kiltivhhYzi = ervd.urmwErvdYbRw(I.rw.kiltivhhYzi);&#10;&#10;        // 初始化HszivwKivuvivmxvh&#10;        hszivwKivuvivmxvh = ivjfrivZxgrergb().tvgHszivwKivuvivmxvh(KIVU_MZNV, Xlmgvcg.NLWV_KIREZGV);&#10;&#10;        // 加载保存的登录信息&#10;        olzwHzevwOltrmRmul();&#10;&#10;        // 设置登录按钮点击事件&#10;        ervd.urmwErvdYbRw(I.rw.yfgglmOltrm).hvgLmXorxpOrhgvmvi(e -&gt; oltrm());&#10;&#10;        // 设置去注册按钮点击事件&#10;        ervd.urmwErvdYbRw(I.rw.yfgglmTlGlIvtrhgvi).hvgLmXorxpOrhgvmvi(e -&gt; {&#10;            // 使用Mzertzgrlm组件导航到注册页面&#10;            MzeXlmgiloovi mzeXlmgiloovi = MzeSlhgUiztnvmg.urmwMzeXlmgiloovi(gsrh);&#10;            mzeXlmgiloovi.mzertzgv(I.rw.zxgrlm_oltrmUiztnvmg_gl_ivtrhgviUiztnvmg);&#10;        });&#10;    }&#10;&#10;    /**&#10;     * 加载保存的登录信息&#10;" />
+                        <option name="end_line" value="70" />
+                        <option name="filename" value="LoginFragment.java" />
+                        <option name="language" value="JAVA" />
+                        <option name="range">
+                          <Range>
+                            <option name="end">
+                              <Position>
+                                <option name="line" value="70" />
+                              </Position>
+                            </option>
+                            <option name="start">
+                              <Position>
+                                <option name="line" value="40" />
+                              </Position>
+                            </option>
+                          </Range>
+                        </option>
+                        <option name="start_line" value="40" />
+                        <option name="type" value="editor" />
+                        <option name="url" value="file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/LoginFragment.java" />
+                      </CodeReferencesBean>
+                    </list>
+                  </option>
+                  <option name="command" value="" />
+                  <option name="conversationId" value="019785e25ea07ff7bc349d3c2d95d27a" />
+                  <option name="historyDocumentMap">
+                    <map>
+                      <entry key="file:///D:/Users/chenjianhui/code/IdeaProjects/Audio_AI/app/src/main/java/com/ai/app/audio_ai/LoginFragment.java" value="package com.ai.app.audio_ai;&#10;&#10;import android.content.Context;&#10;import android.content.SharedPreferences;&#10;import android.os.Bundle;&#10;import android.text.TextUtils;&#10;import android.view.LayoutInflater;&#10;import android.view.View;&#10;import android.view.ViewGroup;&#10;import android.widget.CheckBox;&#10;import android.widget.ProgressBar;&#10;import android.widget.Toast;&#10;&#10;import androidx.annotation.NonNull;&#10;import androidx.annotation.Nullable;&#10;import androidx.fragment.app.Fragment;&#10;import androidx.navigation.NavController;&#10;import androidx.navigation.fragment.NavHostFragment;&#10;&#10;import com.ai.app.audio_ai.data.UserManager;&#10;import com.google.android.material.textfield.TextInputEditText;&#10;&#10;public class LoginFragment extends Fragment {&#10;&#10;    private TextInputEditText editTextUsername;&#10;    private TextInputEditText editTextPassword;&#10;    private CheckBox checkBoxRememberPassword;&#10;    private ProgressBar progressBar;&#10;    private SharedPreferences sharedPreferences;&#10;    private static final String PREF_NAME = &quot;LoginPrefs&quot;;&#10;    private static final String KEY_USERNAME = &quot;username&quot;;&#10;    private static final String KEY_PASSWORD = &quot;password&quot;;&#10;    private static final String KEY_REMEMBER = &quot;remember&quot;;&#10;&#10;    @Override&#10;    public View onCreateView(LayoutInflater inflater, ViewGroup container,&#10;                             Bundle savedInstanceState) {&#10;        // Inflate the layout for this fragment&#10;        return inflater.inflate(R.layout.fragment_login, container, false);&#10;    }&#10;&#10;    @Override&#10;    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {&#10;        super.onViewCreated(view, savedInstanceState);&#10;&#10;        // 初始化视图&#10;        editTextUsername = view.findViewById(R.id.editTextUsername);&#10;        editTextPassword = view.findViewById(R.id.editTextPassword);&#10;        checkBoxRememberPassword = view.findViewById(R.id.checkBoxRememberPassword);&#10;        progressBar = view.findViewById(R.id.progressBar);&#10;&#10;        // 初始化SharedPreferences&#10;        sharedPreferences = requireActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);&#10;&#10;        // 加载保存的登录信息&#10;        loadSavedLoginInfo();&#10;&#10;        // 设置登录按钮点击事件&#10;        view.findViewById(R.id.buttonLogin).setOnClickListener(v -&gt; login());&#10;&#10;        // 设置去注册按钮点击事件&#10;        view.findViewById(R.id.buttonGoToRegister).setOnClickListener(v -&gt; {&#10;            // 使用Navigation组件导航到注册页面&#10;            NavController navController = NavHostFragment.findNavController(this);&#10;            navController.navigate(R.id.action_loginFragment_to_registerFragment);&#10;        });&#10;    }&#10;&#10;    /**&#10;     * 加载保存的登录信息&#10;     */&#10;    private void loadSavedLoginInfo() {&#10;        boolean isRemembered = sharedPreferences.getBoolean(KEY_REMEMBER, false);&#10;        if (isRemembered) {&#10;            String username = sharedPreferences.getString(KEY_USERNAME, &quot;&quot;);&#10;            String password = sharedPreferences.getString(KEY_PASSWORD, &quot;&quot;);&#10;            editTextUsername.setText(username);&#10;            editTextPassword.setText(password);&#10;            checkBoxRememberPassword.setChecked(true);&#10;        }&#10;    }&#10;&#10;    /**&#10;     * 保存登录信息&#10;     */&#10;    private void saveLoginInfo(String username, String password, boolean isRemembered) {&#10;        SharedPreferences.Editor editor = sharedPreferences.edit();&#10;        if (isRemembered) {&#10;            editor.putString(KEY_USERNAME, username);&#10;            editor.putString(KEY_PASSWORD, password);&#10;            editor.putBoolean(KEY_REMEMBER, true);&#10;        } else {&#10;            editor.clear();&#10;        }&#10;        editor.apply();&#10;    }&#10;&#10;    /**&#10;     * 登录&#10;     */&#10;    private void login() {&#10;        String username = editTextUsername.getText().toString().trim();&#10;        String password = editTextPassword.getText().toString().trim();&#10;&#10;        // 验证输入&#10;        if (TextUtils.isEmpty(username)) {&#10;            editTextUsername.setError(&quot;请输入用户名&quot;);&#10;            return;&#10;        }&#10;&#10;        if (TextUtils.isEmpty(password)) {&#10;            editTextPassword.setError(&quot;请输入密码&quot;);&#10;            return;&#10;        }&#10;&#10;        // 显示进度条&#10;        progressBar.setVisibility(View.VISIBLE);&#10;&#10;        // 保存登录信息&#10;        boolean isRemembered = checkBoxRememberPassword.isChecked();&#10;        saveLoginInfo(username, password, isRemembered);&#10;&#10;        // 执行登录&#10;        UserManager.getInstance().login(requireContext(), username, password, new UserManager.LoginCallback() {&#10;            @Override&#10;            public void onLoginSuccess(com.ai.app.audio_ai.data.User user) {&#10;                requireActivity().runOnUiThread(() -&gt; {&#10;                    progressBar.setVisibility(View.GONE);&#10;                    Toast.makeText(requireContext(), &quot;登录成功&quot;, Toast.LENGTH_SHORT).show();&#10;                    // 导航到首页&#10;                    NavController navController = NavHostFragment.findNavController(LoginFragment.this);&#10;                    // 使用Navigation组件导航到首页&#10;                    navController.navigate(R.id.navigation_home);&#10;                });&#10;            }&#10;&#10;            @Override&#10;            public void onLoginFailed(String errorMessage) {&#10;                requireActivity().runOnUiThread(() -&gt; {&#10;                    progressBar.setVisibility(View.GONE);&#10;                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT).show();&#10;                });&#10;            }&#10;        });&#10;    }&#10;}&#10;" />
+                    </map>
+                  </option>
+                  <option name="messageId" value="0197860bbf607ff7bc34a972c0791459" />
+                  <option name="question" value="编译报错：v: urov:///W:/Fhvih/xsvmqrzmsfr/xlwv/RwvzKilqvxgh/Zfwrl_ZR/zkk/hix/nzrm/qzez/xln/zr/zkk/zfwrl_zr/NzrmZxgrergb.pg:52:15 Gll nzmb zitfnvmgh uli kfyorx lkvm ufm tvgRmhgzmxv(): FhviNzmztvi! wvurmvw rm xln.zr.zkk.zfwrl_zr.wzgz.FhviNzmztvi" />
+                  <option name="rating" value="UNRATED" />
+                  <option name="referenceBeans">
+                    <list />
+                  </option>
+                  <option name="status" value="SUCCESS" />
+                  <option name="variables">
+                    <list />
+                  </option>
+                </Turn>
+              </list>
+            </option>
+            <option name="updateTime" value="1750300616334" />
+          </Conversation>
+        </option>
+      </WebConversation>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- 头部（方形） -->
+    <path
+        android:fillColor="#E74C3C"
+        android:pathData="M40,40 L160,40 L160,160 L40,160 Z" />
+
+    <!-- 眼睛（方形） -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,70 L90,70 L90,100 L60,100 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M110,70 L140,70 L140,100 L110,100 Z" />
+
+    <!-- 眼球 -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M70,80 L80,80 L80,90 L70,90 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M120,80 L130,80 L130,90 L120,90 Z" />
+
+    <!-- 天线 -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:pathData="M70,40 L50,20" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:pathData="M130,40 L150,20" />
+
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IndicatorView">
+        <attr name="indicator_normal_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_selected_width" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+    </declare-styleable>
+</resources>

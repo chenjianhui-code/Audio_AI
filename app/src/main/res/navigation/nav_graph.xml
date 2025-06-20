@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authChoiceFragment">
+
+    <fragment
+        android:id="@+id/robotBroadcastFragment"
+        android:name="com.ai.app.audio_ai.ui.robot.RobotBroadcastFragment"
+        android:label="机器人播报"
+        tools:layout="@layout/fragment_robot_broadcast" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ai.app.audio_ai.ui.home.HomeFragment"
+        android:label="首页"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.ai.app.audio_ai.ui.discover.DiscoverFragment"
+        android:label="发现"
+        tools:layout="@layout/fragment_discover" />
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.ai.app.audio_ai.ui.category.CategoryFragment"
+        android:label="分类"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ai.app.audio_ai.ui.profile.ProfileFragment"
+        android:label="我的"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.ai.app.audio_ai.FirstFragment"
+        android:label="用户信息"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.ai.app.audio_ai.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_second" />
+
+    <fragment
+        android:id="@+id/authChoiceFragment"
+        android:name="com.ai.app.audio_ai.AuthChoiceFragment"
+        android:label="欢迎使用"
+        tools:layout="@layout/fragment_auth_choice">
+        <action
+            android:id="@+id/action_authChoiceFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/authChoiceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_authChoiceFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/authChoiceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_authChoiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/authChoiceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+            android:name="com.ai.app.audio_ai.LoginFragment"
+            android:label="登录"
+            tools:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        <action
+                android:id="@+id/action_loginFragment_to_navigation_home"
+                app:destination="@id/navigation_home"
+                app:popUpTo="@id/loginFragment"
+                app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ai.app.audio_ai.RegisterFragment"
+        android:label="注册"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+        
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ai.app.audio_ai.ui.detail.DetailFragment"
+        android:label="详情"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_audioDetailFragment"
+            app:destination="@id/audioDetailFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/audioDetailFragment"
+        android:name="com.ai.app.audio_ai.ui.detail.AudioDetailFragment"
+        android:label="音频详情"
+        tools:layout="@layout/fragment_audio_detail" />
+</navigation>
