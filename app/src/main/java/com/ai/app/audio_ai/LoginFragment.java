@@ -127,6 +127,12 @@ public class LoginFragment extends Fragment {
                 requireActivity().runOnUiThread(() -> {
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(requireContext(), "登录成功", Toast.LENGTH_SHORT).show();
+                    
+                    // 切换到主页面并显示底部导航栏
+                    if (requireActivity() instanceof com.ai.app.audio_ai.ui.MainActivity) {
+                        ((com.ai.app.audio_ai.ui.MainActivity) requireActivity()).switchToMainPage();
+                    }
+                    
                     // 导航到首页
                     NavController navController = NavHostFragment.findNavController(LoginFragment.this);
                     // 使用Navigation组件导航到首页

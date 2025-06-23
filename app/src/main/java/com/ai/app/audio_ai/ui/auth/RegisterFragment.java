@@ -48,6 +48,13 @@ public class RegisterFragment extends Fragment {
                 Toast.makeText(requireContext(), "两次输入的密码不一致", Toast.LENGTH_SHORT).show();
                 return;
             }
+            
+            // 验证密码强度
+            int passwordStrength = calculatePasswordStrength(password);
+            if (passwordStrength < 40) {
+                Toast.makeText(requireContext(), "密码强度太弱，请使用更强的密码", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             // 创建用户对象
             User user = new User(
@@ -82,8 +89,12 @@ public class RegisterFragment extends Fragment {
                             @Override
                             public void onLoginSuccess(User user) {
                                 requireActivity().runOnUiThread(() -> {
-                                    // 返回上一页
-                                    Navigation.findNavController(v).navigateUp();
+                                    // 切换到主页面并显示底部导航栏
+                                    if (requireActivity() instanceof com.ai.app.audio_ai.ui.MainActivity) {
+                                        ((com.ai.app.audio_ai.ui.MainActivity) requireActivity()).switchToMainPage();
+                                    }
+                                    // 导航到首页
+                                    Navigation.findNavController(v).navigate(com.ai.app.audio_ai.R.id.action_registerFragment_to_navigation_home);
                                 });
                             }
 
@@ -117,5 +128,56 @@ public class RegisterFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+    
+    /**
+     * 计算密码强度
+     * @param password 密码
+     * @return 密码强度分数（0-100）
+     */
+    private int calculatePasswordStrength(String password) {
+        int score = 0;
+        
+        // 基础分数：密码长度
+        if (password.length() >= 8) {
+            score += 10;
+        }
+        if (password.length() >= 12) {
+            score += 10;
+        }
+        
+        // 包含小写字母
+        if (password.matches(".*[a-z].*")) {
+            score += 10;
+        }
+        
+        // 包含大写字母
+        if (password.matches(".*[A-Z].*")) {
+            score += 10;
+        }
+        
+        // 包含数字
+        if (password.matches(".*\\d.*")) {
+            score += 10;
+        }
+        
+        // 包含特殊字符
+        if (password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>/?].*")) {
+            score += 20;
+        }
+        
+        // 混合字符类型
+        int typesCount = 0;
+        if (password.matches(".*[a-z].*")) typesCount++;
+        if (password.matches(".*[A-Z].*")) typesCount++;
+        if (password.matches(".*\\d.*")) typesCount++;
+        if (password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>/?].*")) typesCount++;
+        
+        if (typesCount >= 3) {
+            score += 20;
+        }
+        
+        // 限制最高分为100
+        return Math.min(score, 100);
     }
 }

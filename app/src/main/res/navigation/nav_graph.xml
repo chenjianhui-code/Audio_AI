@@ -99,7 +99,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.ai.app.audio_ai.RegisterFragment"
+        android:name="com.ai.app.audio_ai.ui.auth.RegisterFragment"
         android:label="注册"
         tools:layout="@layout/fragment_register">
         <action
